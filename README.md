@@ -18,7 +18,7 @@ This Project simulates real-world brute-force SSH attacks using Kali Linux and U
 # Sample Output
 --- Intrusion Detection Report---
 
-ALERT: 192.168.64.3  
+ALERT: 192.168.64.x  
 Attempts: 5  
 First Seen: 2026-01-11 05:29:46.541707+00:00  
 Last Seen: 2026-01-11 05:29:46.588486+00:00  
