@@ -42,7 +42,7 @@ hydra 0l victim -P passwords.txt ssh://<UBUNTU_IP>
 Replace <UBUNTU_IP> with the IP address of the Ubuntu victim VM.
 
 ## Lab Setup
-Attacker: Kali Linux VM on UTM (Apple Silicon) -> 192.168.64.x
-Victim: Ubuntu Server VM on UTM (Apple Silicon) -> 192.168.64.x
-Attack Simulation: SSH brute-force attempts using Hydra inside an isolated VM network
+Attacker: Kali Linux VM on UTM (Apple Silicon) -> 192.168.64.x  
+Victim: Ubuntu Server VM on UTM (Apple Silicon) -> 192.168.64.x  
+Attack Simulation: SSH brute-force attempts using Hydra inside an isolated VM network  
 Detection: Python script parses /var/log/auth.log and flags repeated failed login attempts
