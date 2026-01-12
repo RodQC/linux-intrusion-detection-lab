@@ -29,3 +29,20 @@ Duration: 0:00:00.046779
 - Python automation for intrusion detection
 - Network attack simulation
 - Incident response and firewall mitigation
+
+## How to Run
+This project is intended to be used only in a private lab environment.  
+Run the Intrusion detection script on the Ubuntu victim VM:  
+
+sudo python3 deteect_intrusions.py  
+
+(Optional) To generate test authentication failures from the Kali attacker VM:
+
+hydra 0l victim -P passwords.txt ssh://<UBUNTU_IP>  
+Replace <UBUNTU_IP> with the IP address of the Ubuntu victim VM.
+
+## Lab Setup
+Attacker: Kali Linux VM on UTM (Apple Silicon) -> 192.168.64.x
+Victim: Ubuntu Server VM on UTM (Apple Silicon) -> 192.168.64.x
+Attack Simulation: SSH brute-force attempts using Hydra inside an isolated VM network
+Detection: Python script parses /var/log/auth.log and flags repeated failed login attempts
